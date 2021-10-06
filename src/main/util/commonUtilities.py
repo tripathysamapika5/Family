@@ -13,6 +13,9 @@ class CommonUtilities:
     
     @staticmethod
     def getInputFilePath(cliArguments):
+        '''
+        It derives the input test file absolute path from command line arguments
+        '''
         if len(cliArguments) < 2 :
             raise CommandLineArgumentNotAvailable('Command line argumemt not found !')
         else:
@@ -24,12 +27,18 @@ class CommonUtilities:
     
     @staticmethod
     def readFile(inputFilePath):
+        '''
+        It reads a file and returns the list of lines
+        '''
         with open(inputFilePath) as f:
             lines = f.readlines()
         return lines
      
     @staticmethod
     def readInputFileToActions(inputFilePath):
+        '''
+        it will read the input file and convert it ito instructions
+        '''
         actions = []
         for line in CommonUtilities.readFile(inputFilePath):
             words = [word.strip() for word in  line.split(' ')]
@@ -70,6 +79,9 @@ class CommonUtilities:
 
     @staticmethod
     def printResult(result):
+        '''
+        it will print the desired output
+        '''
         if result == True:
             print('CHILD_ADDITION_SUCCEEDED')
         elif isinstance(result, list):
@@ -79,6 +91,9 @@ class CommonUtilities:
             
     @staticmethod
     def runMethod(obj, methodName, arguments):
+        '''
+        It will return a method when we pass the method name and class object and arguments as parameter
+        '''
         try:
             result = getattr(obj, methodName)(**arguments)
             CommonUtilities.printResult(result)
@@ -89,6 +104,9 @@ class CommonUtilities:
                 
     @staticmethod
     def performActions(shanFamilyTreeObj, actions):
+        '''
+        It will perform the actions
+        '''
         for action in actions:
             methodName = action['method']
             arguments = copy.deepcopy(action)
