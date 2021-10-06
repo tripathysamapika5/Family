@@ -32,3 +32,9 @@ python -m geektrust '<path till this point>/src/main/resources/input2.txt'
 python -m geektrust '<path till this point>/src/main/resources/input3.txt'
 python -m geektrust '<path till this point>/src/main/resources/input4.txt'
 ```
+
+## TO TEST THE TESTCASES
+
+```
+python -m unittest discover
+```
