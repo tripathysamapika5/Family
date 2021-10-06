@@ -4,7 +4,6 @@ import os
 
 project_dir = os.getcwd()
 sys.path.append(project_dir)
-print(project_dir)
 
 from src.main.family.person import Person
 from src.main.util.gender import Gender
@@ -411,8 +410,8 @@ class ShanFamilyTree(FamilyTree):
         super().addChild('Chitra', 'Jnki', 'Female')
         super().addChild('Chitra', 'Ahit', 'Male')
         super().addChild('Satya', 'Atya', 'Female')
-        super().addChild('Satya', 'Vyas', 'Male')
         super().addChild('Satya', 'Asva', 'Male')
+        super().addChild('Satya', 'Vyas', 'Male')
         
         super().addSpouse('Dritha', 'Jaya', 'Male')
         super().addSpouse('Jnki', 'Arit', 'Male')
@@ -425,6 +424,11 @@ class ShanFamilyTree(FamilyTree):
         super().addChild('Satvy', 'Vasa', 'Male')
         super().addChild('Krpi', 'Kriya', 'Male')
         super().addChild('Krpi', 'Krithi', 'Female')
+        
+        
+        
+
+
         
         
         
@@ -442,5 +446,6 @@ if __name__ == '__main__':
     #shanFamilyTree.addChild('Asva', 'Vani', 'Female')
     print(shanFamilyTree.getSiblingNames('Vasa'))
     print(shanFamilyTree.getSisterInLawNames('Atya'))
+    #shanFamilyTree.addChild('Satya', 'Yaya', 'Female')
+    print(shanFamilyTree.getSisterInLawNames('Satvy'))
           
-        

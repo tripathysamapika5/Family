@@ -27,10 +27,13 @@ pip install -r requirements.txt
 ## HOW TO RUN THE APPLICATION
 
 ```
-python -m geektrust '<path till this point>/src/main/resources/input1.txt'
-python -m geektrust '<path till this point>/src/main/resources/input2.txt'
-python -m geektrust '<path till this point>/src/main/resources/input3.txt'
-python -m geektrust '<path till this point>/src/main/resources/input4.txt'
+python -m geektrust '<path till this point>/src/main/resources/inputfile1.txt'
+python -m geektrust '<path till this point>/src/main/resources/inputfile2.txt'
+python -m geektrust '<path till this point>/src/main/resources/inputfile3.txt'
+python -m geektrust '<path till this point>/src/main/resources/inputfile4.txt'
+python -m geektrust '<path till this point>/src/main/resources/inputfile5.txt'
+python -m geektrust '<path till this point>/src/main/resources/inputfile6.txt'
+
 ```
 
 ## TO TEST THE TESTCASES

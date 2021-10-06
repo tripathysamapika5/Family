@@ -32,7 +32,7 @@ class CommonUtilities:
     def readInputFileToActions(inputFilePath):
         actions = []
         for line in CommonUtilities.readFile(inputFilePath):
-            words = line.split(' ')
+            words = [word.strip() for word in  line.split(' ')]
             action = {}
             if words[0].upper() == 'ADD_CHILD':
                 action['method'] = 'addChild'

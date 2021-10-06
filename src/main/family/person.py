@@ -3,7 +3,6 @@ import os
 
 project_dir = os.getcwd()
 sys.path.append(project_dir)
-print(project_dir)
 
 from src.main.util.gender import Gender
 

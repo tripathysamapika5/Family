@@ -18,7 +18,7 @@ def main():
     try:
         inputFilePath = CommonUtilities.getInputFilePath(sys.argv)
         actions = CommonUtilities.readInputFileToActions(inputFilePath)
-        
+
         shanFamilyTree = ShanFamilyTree()
         CommonUtilities.performActions(shanFamilyTree, actions)
 
